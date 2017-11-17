@@ -1,6 +1,6 @@
 package test.cvs;
 
-import com.ytt.Util.CSVUtil;
+import com.ytt.util.CSVUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;

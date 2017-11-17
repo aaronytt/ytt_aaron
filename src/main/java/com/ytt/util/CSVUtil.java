@@ -1,4 +1,4 @@
-package com.ytt.Util;
+package com.ytt.util;
 
 import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
