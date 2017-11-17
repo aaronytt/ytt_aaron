@@ -12,7 +12,6 @@
         <webroots>
           <root url="file://D:\project\ytt_aaron\src\main\webapp" relative="/" />
         </webroots>
-        <sourceRoots />
       </configuration>
     </facet>
   </component>
