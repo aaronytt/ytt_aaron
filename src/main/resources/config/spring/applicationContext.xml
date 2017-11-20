@@ -19,7 +19,7 @@
     <!-- 激活自动代理功能 -->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
-    <import resource="spring-mvc.xml"/>
+    <!--<import resource="spring-mvc.xml"/>-->
     <import resource="spring-mybatis.xml"/>
     <!--<import resource="spring-redis.xml"/>-->
 

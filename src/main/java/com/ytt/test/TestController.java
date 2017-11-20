@@ -1,6 +1,5 @@
 package com.ytt.test;
 
-import com.ytt.mapper.MemberMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +15,13 @@ import java.util.Map;
 public class TestController {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(TestController.class);
-    @Autowired
-    MemberMapper memberMapper;
-
 
     @RequestMapping("/demo")
+    @ResponseBody
     public String test(){
 
         LOGGER.info("来了");
         return "/demo";
     }
-
-    @RequestMapping("/member")
-    @ResponseBody
-    public List<Map<String,Object>> get(){
-        return memberMapper.selectAll();
-    }
-
 
 }

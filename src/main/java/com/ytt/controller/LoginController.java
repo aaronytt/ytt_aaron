@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/user")
 public class LoginController {
 
 
@@ -22,6 +22,7 @@ public class LoginController {
     LoginService loginService;
 
     @RequestMapping
+    @ResponseBody
     public String login(){
         return "/login/login";
     }

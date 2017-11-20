@@ -1,6 +1,7 @@
-package test;
+package test.controller;
 
-import com.ytt.mapper.MemberMapper;
+import com.ytt.mapper.RUserMapper;
+import com.ytt.model.RUser;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,17 +14,13 @@ import java.util.Map;
 @Transactional
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/config/spring/spring-mybatis.xml"})
-public class Test {
-
+public class UserServiceTest {
     @Autowired
-    MemberMapper memberMapper;
+    RUserMapper rUserMapper;
 
     @org.junit.Test
-    public void test(){
+    public void testUserService(){
 
-        List<Map<String,Object>> list = memberMapper.selectAll();
-
-        System.out.println(list);
 
     }
 

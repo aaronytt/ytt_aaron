@@ -3,17 +3,24 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 自动扫描控制器 -->
     <context:component-scan base-package="com.ytt.controller"/>
 
     <context:annotation-config></context:annotation-config>
+
+    <!-- 启用Spring对基于@AspectJ aspects的配置支持 -->
+    <!-- 激活自动代理功能 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <!-- 控制器映射器和控制器适配器 -->
     <mvc:annotation-driven>
@@ -35,6 +42,16 @@
     <mvc:default-servlet-handler/>
     <!-- 静态资源映射器 -->
     <mvc:resources mapping="/statics/**" location="/WEB-INF/statics/" />
+
+    <!--<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">-->
+        <!--<property name="beannames">-->
+            <!--<list>-->
+                <!--<value>"com.ytt.i18n"</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />-->
 
     <!-- 视图渲染 -->
     <bean id="internalResourceViewResolver"
