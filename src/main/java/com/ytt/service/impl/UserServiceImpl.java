@@ -11,7 +11,6 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Locale;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -40,6 +39,5 @@ public class UserServiceImpl implements UserService {
     public void updateUesr() {
         System.out.println(">>>>>>我在ytt刷脸了，好开心啊");
     }
-
 
 }
