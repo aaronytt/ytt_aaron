@@ -7,9 +7,11 @@ import com.ytt.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -18,6 +20,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     RUserMapper rUserMapper;
+    @Autowired
+    MessageSource messageSource;
 
     @Override
     public RUser selectUserById(Integer id) {

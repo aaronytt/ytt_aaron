@@ -44,9 +44,9 @@
     <mvc:resources mapping="/statics/**" location="/WEB-INF/statics/" />
 
     <!--<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">-->
-        <!--<property name="beannames">-->
+        <!--<property name="basenames">-->
             <!--<list>-->
-                <!--<value>"com.ytt.i18n"</value>-->
+                <!--<value>com/ytt/i18n</value>-->
             <!--</list>-->
         <!--</property>-->
     <!--</bean>-->
