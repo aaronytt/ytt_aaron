@@ -1,6 +1,8 @@
 package test;
 
-public class AnyTest {
+import javax.servlet.http.HttpServlet;
+
+public class AnyTest extends HttpServlet{
 
 //    Public static void change Str(String str){
     //        str = "123456";
