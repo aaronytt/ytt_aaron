@@ -9,6 +9,13 @@ import java.util.List;
 
 /**
  * 用于测试OutOfMemoryError
+ * 运行时数据区通常包括这几个部分：程序计数器(Program Counter Register)、Java栈(VM Stack)、本地方法栈(Native Method Stack)、方法区(Method Area)、堆(Heap)
+ * Xss：每个线程的stack大小（栈）
+ * Xmx：JAVA HEAP的最大值、默认为物理内存的1/4
+ * Xms：JAVA HEAP的初始值，server端最好Xms与Xmx一样
+ * Xmn：JAVA HEAP young区的大小
+ * XX:PermSize：设定内存的永久保存区域
+ * XX:MaxPermSize：设定最大内存的永久保存区域
  */
 public class OutOfMemoryErrorTest {
 
@@ -106,37 +113,42 @@ public class OutOfMemoryErrorTest {
     /**
      * 4.运行时常量池导致的内纯溢出异常
      * VM Args: -XX:PermSize=10M -XX:MaxPermSize=10M
+     *
+     * 在JDK1.8中，取消了PermGen，取而代之的是Metaspace，所以PermSize和MaxPermSize参数失效，取而代之的是 -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=128m
+     *参考：http://blog.csdn.net/lk7688535/article/details/51767333 http://caoyaojun1988-163-com.iteye.com/blog/1969853
+     *
      */
     public static class RuntimeConstantPoolOOM {
 
-//        public static void main(String[] args) {
-//            //使用List保持着常量池引用，避免Full GC 回收常量池行为
-//            List<String> list = new ArrayList<String>();
-//            //10MB的PermSize在integer范围内足够产生OOM了
-//            int i = 0;
-//
-//            while(true){
-//                list.add(String.valueOf(i++).intern());
-//                System.out.println(i);
-//            }
-//        }
+        public static void main(String[] args) {
+            //使用List保持着常量池引用，避免Full GC 回收常量池行为
+            List<String> list = new ArrayList<String>();
+            //10MB的PermSize在integer范围内足够产生OOM了
+            int i = 0;
+
+            while(true){
+                list.add(String.valueOf(i++).intern());
+                System.out.println(i);
+            }
+        }
 
         /**
          * 4.1关于String.intern返回引用的测试
          * 在1.6中运行，是两个false
          * 在1.7以后，依次是true，false
          */
-        public static void main(String[] args) {
-
-            String str1 = new StringBuilder("我").append("和你").toString();
-            System.out.println(str1.intern() == str1);
-
-            String str2 = new StringBuilder("ja").append("va").toString();
-            System.out.println(str2.intern() == str2);
-
-        }
+//        public static void main(String[] args) {
+//
+//            String str1 = new StringBuilder("我").append("和你").toString();
+//            System.out.println(str1.intern() == str1);
+//
+//            String str2 = new StringBuilder("ja").append("va").toString();
+//            System.out.println(str2.intern() == str2);
+//
+//        }
 
     }
+
 
 
 
