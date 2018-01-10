@@ -10,7 +10,7 @@ package com.ytt.core;
  * @Date: 22:06 2018/1/10
  * @Modiflid By:
  */
-public class InterfaceDefauleAndAbstract {
+public class InterfaceImplementMethodConflict {
 
 }
 
