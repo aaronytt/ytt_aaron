@@ -1,18 +1,38 @@
 package com.ytt.core;
 
+import java.util.Objects;
+
 /**
- *
+ * @Author: aaron
+ * @Descriotion:
+ * @Date: 16:19 2018/1/10
+ * @Modiflid By:
  */
 public class EqualsExample {
 
     private String name;
     private int num;
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
-        return super.hashCode();
+        //组合散列值
+        return Objects.hash(name,num);
+        //可以手动
+//        return 7 * Objects.hashCode(name)
+//           + 11 * Integer.hashCode(num);
+//           + 13 * (x)
+//           ....
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
 
@@ -26,6 +46,7 @@ public class EqualsExample {
         EqualsExample other = (EqualsExample) obj;
         //5.开始对所需要比较的域进行比较
         return num == other.num && name.equals(other.getName());
+
     }
 
     public String getName() {
@@ -43,4 +64,5 @@ public class EqualsExample {
     public void setNum(int num) {
         this.num = num;
     }
+
 }
