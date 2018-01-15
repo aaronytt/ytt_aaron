@@ -1,9 +1,7 @@
-package test.Stream;
+package test.stream;
 
 import org.junit.Test;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.function.Function;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;

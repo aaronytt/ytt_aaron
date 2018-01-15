@@ -1,8 +1,7 @@
-package test.Stream;
+package test.stream;
 
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;

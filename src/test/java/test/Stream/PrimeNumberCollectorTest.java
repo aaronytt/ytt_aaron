@@ -1,9 +1,8 @@
-package test.Stream;
+package test.stream;
 
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class PrimeNumberCollectorTest {

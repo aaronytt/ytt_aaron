@@ -1,9 +1,8 @@
-package test.Stream;
+package test.stream;
 
 import org.junit.Test;
 
 import java.util.Spliterator;
-import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
