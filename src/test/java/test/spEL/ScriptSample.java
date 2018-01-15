@@ -60,7 +60,7 @@ public class ScriptSample {
 //        System.out.println(time21-time11);
 //
 //        Arrays.stream(new String[]{"1","2"});
-//        Stream.of(new String[]{"1","2"});
+//        stream.of(new String[]{"1","2"});
 //        Arrays.asList(new String[]{"1","2"}).stream().forEach(b -> System.out.format("[%s,%s]",b[0],b[1]));
 
         System.out.println(Stream.iterate(1 ,b -> 1 + b).limit(10).map(b -> b + "").collect(counting()));
