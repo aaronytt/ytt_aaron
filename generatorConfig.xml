@@ -14,9 +14,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/ytt?serverTimezone=GMT%2B8"
-                        userId="aaron"
-                        password="zcc123456">
+                        connectionURL="jdbc:mysql://localhost:3306/zcc?serverTimezone=GMT%2B8"
+                        userId="test"
+                        password="123456">
         </jdbcConnection>
 
         <javaTypeResolver >
@@ -54,16 +54,14 @@
             <!--<ignoreColumn column="FRED" />-->
             <!--<columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />-->
 
-            <columnOverride column="id" javaType="java.lang.Integer" />
+            <columnOverride column="user_id" property="userId" javaType="java.lang.Integer" />
+            <columnOverride column="nickname" javaType="java.lang.String" />
             <columnOverride column="username" javaType="java.lang.String" />
             <columnOverride column="password" javaType="java.lang.Integer" />
-            <columnOverride column="nickname" javaType="java.lang.String" />
-            <columnOverride column="name" javaType="java.lang.String" />
-            <columnOverride column="mobile" javaType="java.lang.String" />
-            <columnOverride column="sex" javaType="java.lang.Byte" />
+            <columnOverride column="last_visit" property="lastVisit" javaType="java.util.Date" />
+            <columnOverride column="last_ip" property="lastIp" javaType="java.lang.String" />
             <columnOverride column="create_time" property="createTime" javaType="java.util.Date" />
             <columnOverride column="update_time" property="updateTime" javaType="java.util.Date" />
-
         </table>
 
     </context>
