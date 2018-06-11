@@ -24,7 +24,6 @@ public class ChainOfResponsibilityTest {
         UnaryOperator<String> spellProcessing = str -> "Spell " + str;
 
         Function<String,String> pipeline = headerProcessing.compose(spellProcessing);
-
         System.out.println(pipeline.apply("哈哈哈，这个责任链模式太简单了"));
 
     }
