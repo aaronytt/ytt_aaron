@@ -20,13 +20,13 @@ public class AnyTest extends HttpServlet{
 
     public static void main(String[] args) {
 
-        //        String a = "33";
-        //        String b = "44";
-        //
-        //        a = b;
-        //        b = "55";
-        //        System.out.println(a);
-        //        System.out.println(b);
+                String a = "33";
+                String b = "44";
+
+                a = b;
+                b = "55";
+                System.out.println(a);
+                System.out.println(b);
 
         test();
 
@@ -42,6 +42,7 @@ public class AnyTest extends HttpServlet{
 
         System.out.println(a);
         System.out.println(b);
+        System.out.println(a==b);
 
     }
 }

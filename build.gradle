@@ -107,6 +107,9 @@ dependencies {
 
     compile 'net.sourceforge.javacsv:javacsv:2.0'
 
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    compile 'org.seleniumhq.selenium:selenium-java:3.12.0'
+
     compile 'log4j:log4j:1.2.17'
     compile 'org.slf4j:slf4j-api:1.7.25'
 //    compile 'org.apache.logging.log4j:log4j-core:2.8.2'
