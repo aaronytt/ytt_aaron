@@ -1,4 +1,4 @@
-package test.jvm;
+package test.jvm_lecture;
 
 /**
  * @Author: aaron
