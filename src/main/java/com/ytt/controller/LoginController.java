@@ -5,10 +5,8 @@ import com.ytt.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/login")
@@ -18,7 +16,6 @@ public class LoginController {
     private final static Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
-    @Qualifier("loginServiceImpl")
     LoginService loginService;
 
     @RequestMapping
@@ -27,20 +24,20 @@ public class LoginController {
     }
 
     @RequestMapping("into")
-    public String loginCheck(){
+    public String loginInto(String username, String password){
 
-
+        loginService.login(username,password);
 
         return null;
 
     }
 
-    @RequestMapping("/login")
-    @ResponseBody
-    public String[] loginInto(){
-        loginService.login();
-        ((UserService)loginService).updateUesr();
-        return new String[]{"welcome","come"};
-    }
+//    @RequestMapping("/login")
+//    @ResponseBody
+//    public String[] login(String username, String password){
+//        loginService.login(username,password);
+//        ((UserService)loginService).updateUesr();
+//        return new String[]{"welcome","come"};
+//    }
 
 }

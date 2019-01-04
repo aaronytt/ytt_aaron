@@ -84,7 +84,7 @@ dependencies {
     compile 'org.aspectj:aspectjrt:1.8.10'
     compile 'cglib:cglib:3.2.5'
 
-    compile 'org.slf4j:slf4j-api:1.7.25'
+
     compile 'com.fasterxml.jackson.core:jackson-core:2.8.9'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.9'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.9'
@@ -99,13 +99,14 @@ dependencies {
     compile 'commons-io:commons-io:2.5'
     compile 'commons-codec:commons-codec:1.10'
 
-    compile 'org.springframework.data:spring-data-redis:1.8.4.RELEASE'
-    compile 'redis.clients:jedis:2.9.0'
+//    compile 'org.springframework.data:spring-data-redis:1.8.4.RELEASE'
+//    compile 'redis.clients:jedis:2.9.0'
 
     compile 'net.sourceforge.javacsv:javacsv:2.0'
 
     compile 'log4j:log4j:1.2.17'
     compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
 //    compile 'org.apache.logging.log4j:log4j-core:2.8.2'
 //    compile 'org.apache.logging.log4j:log4j-api:2.8.2'
 //    compile 'org.apache.logging.log4j:log4j-web:2.8.2'

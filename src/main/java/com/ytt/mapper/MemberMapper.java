@@ -1,13 +1,15 @@
 package com.ytt.mapper;
 
+import com.ytt.model.RUser;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 public interface MemberMapper {
 
-    List<Map<String,Object>> selectAll();
+    List<RUser> selectAll();
+
+    RUser selectOne(String username, String password);
 
 }
